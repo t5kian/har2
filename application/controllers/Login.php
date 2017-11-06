@@ -11,6 +11,7 @@ class Login extends CI_controller
   public function kirjaudu(){
     $_SESSION['user']=$this->input->post('tunnus');
     $_SESSION['kirjautunut']=true;
+    redirect('oppilas/nayta_oppilaat');
   }
   public function kirjaudu_ulos(){
     $_SESSION['kirjautunut']=false;
